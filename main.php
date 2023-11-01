@@ -1,20 +1,24 @@
 <?php
-    require_once "model\pessoa.php";
+require_once "model/pessoa.php";
 
-    $pessoa = new \app\model\Pessoa();
-    $pessoa->setNome("Gustavo");
-    $pessoa->setSobrenome("Verdi");
-    $pessoa->setDataNascimento(new DateTime("2002-01-08"));
+$pessoa = new \app\model\Pessoa();
+$pessoa->setNome("Gustavo");
+$pessoa->setSobrenome("Verdi");
+$pessoa->setCpf("12345678900"); // Adicione o CPF desejado
+$pessoa->setDataNascimento(new DateTime("2002-01-08"));
 
-    $pessoa->gettelefone()->setTipo(1);
-    $pessoa->getTelefone()->setNome("Tel Celular");
-    $pessoa->getTelefone()->setValor("(47) 99999-9999");
+$telefone = new \app\model\contato(); // Crie uma instância de contato
+$telefone->setTipo(1);
+$telefone->setNome("Tel Celular");
+$telefone->setValor("(47) 99999-9999");
+$pessoa->setTelefone($telefone);
 
-    $pessoa->getEndereco()->setLogradouro("Rua 7 de Novembro");
-    $pessoa->getEndereco()->setBairro("Centro");
-    $pessoa->getEndereco()->setCidade("Rio do Sul");
-    $pessoa->getEndereco()->setEstado("Santa Catarina");
-    $pessoa->getEndereco()->setCep("89000-000");
-
-    echo $pessoa->toJson();
+$endereco = new \app\model\endereco(); // Crie uma instância de endereco
+$endereco->setlogradouro("Rua 7 de Novembro");
+$endereco->setBairro("Centro");
+$endereco->setCidade("Rio do Sul");
+$endereco->setEstado("Santa Catarina");
+$endereco->setCep("89000-000");
+$pessoa->setEndereco($endereco);
+echo $pessoa->toJson();
 ?>

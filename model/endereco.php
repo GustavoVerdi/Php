@@ -5,7 +5,7 @@
         private $logradouro;
         private $bairro;
         private $cidade;
-        private $uf;
+        private $Estado;
         private $cep;
 
 
@@ -18,8 +18,8 @@
     public function setCidade($cidade) {
         $this->cidade = $cidade;
     }
-    public function setUf($uf) {
-        $this->uf = $uf;
+    public function setestado($estado) {
+        $this->Estado = $estado;
     }
     public function setcep($cep) {
         $this->cep = $cep;
@@ -34,8 +34,8 @@
     public function getCidade() {
         return $this->cidade;
     }
-    public function getuf() {
-        return $this->uf;
+    public function getestado() {
+        return $this->Estado;
     }
     public function getCep() {
         return $this->cep;
