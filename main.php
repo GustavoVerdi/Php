@@ -1,10 +1,11 @@
 <?php
 require_once "model/pessoa.php";
+require_once "lib/export.php";
 
 $pessoa = new \app\model\Pessoa();
 $pessoa->setNome("Gustavo");
 $pessoa->setSobrenome("Verdi");
-$pessoa->setCpf("12345678900"); // Adicione o CPF desejado
+$pessoa->setCpf("07185450950"); // Adicione o CPF desejado
 $pessoa->setDataNascimento(new DateTime("2002-01-08"));
 
 $telefone = new \app\model\contato(); // Crie uma instância de contato
