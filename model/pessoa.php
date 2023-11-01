@@ -15,6 +15,7 @@ class Pessoa {
     }
     public function getInicializaClasse() {
         $this->tipo = 1;
+        $this->telefone = new \app\model\contato();
     }
     public function toJson() {
         return json_encode(get_object_vars($this));
