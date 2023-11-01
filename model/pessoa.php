@@ -14,7 +14,7 @@ class Pessoa {
 
 
     public function __construct() {
-        $this->InicializaClasse();
+       // $this->InicializaClasse();
     }
     public function getInicializaClasse() {
         $this->tipo = 1;

@@ -1,37 +1,20 @@
-<?php 
-// main.php
+<?php
+    require_once "model\pessoa.php";
 
-require_once "model\pessoa.php";
+    $pessoa = new \app\model\Pessoa();
+    $pessoa->setNome("Gustavo");
+    $pessoa->setSobrenome("Verdi");
+    $pessoa->setDataNascimento(new DateTime("2002-01-08"));
 
-    $pessoa = new \app\model\pessoa();
+    $pessoa->gettelefone()->setTipo(1);
+    $pessoa->getTelefone()->setNome("Tel Celular");
+    $pessoa->getTelefone()->setValor("(47) 99999-9999");
 
+    $pessoa->getEndereco()->setLogradouro("Rua 7 de Novembro");
+    $pessoa->getEndereco()->setBairro("Centro");
+    $pessoa->getEndereco()->setCidade("Rio do Sul");
+    $pessoa->getEndereco()->setEstado("Santa Catarina");
+    $pessoa->getEndereco()->setCep("89000-000");
 
-$nome = $_POST['nome']; 
-$sobrenome = $_POST['sobrenome']; 
-$cnpj = $_POST['cnpj']; 
-$endereco = $_POST['endereco']; 
-$bairro = $_POST['bairro']; 
-$cidade = $_POST['cidade']; 
-$uf = $_POST['uf']; 
-$cep = $_POST['cep']; 
-
-$oPessoa = new Pessoa();
-$oPessoa->setNome($nome);
-$oPessoa->setSobrenome($sobrenome);
-$oPessoa->setCpf($cpf);
-$oPessoa->settelefone($telefone);
-$oPessoa->setEndereco($endereco);
-$oPessoa->setBairro($bairro);
-$oPessoa->setCidade($cidade);
-$oPessoa->setUf($uf);
-$oPessoa->setCep($cep);
-
-echo "Nome Completo: " . $oPessoa->getNome() . " " . $oPessoa->getSobrenome() . "\n <br>";
-echo "Cpf: " . $oPessoa->getCpf() . "\n <br>";
-echo "telefone: "  $oPessoa->gettelefone() . "/n <br>";
-echo "Endereço: " . $oPessoa->getEndereco() . "\n <br>";
-echo "Bairro: " . $oPessoa->getBairro() . "\n <br>";
-echo "Cidade: " . $oPessoa->getCidade() . "\n <br>";
-echo "UF: " . $oPessoa->getUf() . "\n <br>";
-echo "CEP: " . $oPessoa->getCep() . "\n <br>";
+    echo $pessoa->toJson();
 ?>

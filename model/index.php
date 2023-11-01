@@ -1,5 +1,6 @@
 <?php
     require_once "model\pessoa.php";
+    //require_once "lib\export.php";
 
     $pessoa = new \app\model\Pessoa();
     $pessoa->setNome("Gustavo");
