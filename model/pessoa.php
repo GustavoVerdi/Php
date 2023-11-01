@@ -1,9 +1,13 @@
 <?php 
+    namespace app\model;
 
+    require_once "endereco.php";
+    require_once "contato.php";
 class Pessoa {
     private $nome;
     private $sobrenome;
     private $cpf;
+    private $telefone;
 
 
     public function __construct() {
@@ -12,7 +16,9 @@ class Pessoa {
     public function getInicializaClasse() {
         $this->tipo = 1;
     }
-
+    public function toJson() {
+        return json_encode(get_object_vars($this));
+    }
     public function setNome($nome) {
         $this->nome = $nome;
     }
@@ -31,6 +37,13 @@ class Pessoa {
     }
     public function getCpf() {
         return $this->cpf;
+    }
+    public function settelefone($telefone) {
+        $this->cpf = $telefone;
+    }
+   
+    public function gettelefone() {
+        return $this->nome;
     }
 }
 ?>
