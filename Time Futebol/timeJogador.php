@@ -8,7 +8,7 @@
             return $this->jogadores;
         }
         public function addJogadores($oJogador) {
-            $array_push($this->jogadores, $oJogador);
+            array_push($this->jogadores, $oJogador);
         }
         public function getNome() {
             return $this->nome;
@@ -16,12 +16,18 @@
         public function setNome($nome){
             $this->nome = $nome; 
         }
+        public function getAnoFundacao() {
+            return $this->anoFundacao;
+        }
+        public function setAnoFundacao($anoFundacao){
+            $this->anoFundacao = $anoFundacao;
+        }
     }
 
     class jogador {
         private $nome;
         private $posicao;
-        
+
         public function getNome(){
             return $this->nome;
         }    
@@ -43,8 +49,13 @@
     $jogador->setNome ("João"); 
     $jogador->setPosicao ("Goleiroo");
 
+    $brasil->addJogadores($jogador); 
+
     $jogador = new jogador();
-    $jogador->setNome ("gabriel"); 
+    $jogador->setNome ("Gabriel"); 
     $jogador->setPosicao ("Atacante");
 
+    $brasil->addJogadores($jogador);
+    
+    var_dump($brasil); 
 ?>
