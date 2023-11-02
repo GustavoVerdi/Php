@@ -4,9 +4,6 @@
         private $anoFundacao;
         private $jogadores = array();
 
-        public function __construct(){
-            $this->jogadores;
-        }
         public function getJogadores() {
             return $this->jogadores;
         }
@@ -16,12 +13,15 @@
         public function getNome() {
             return $this->nome;
         }
-        
+        public function setNome($nome){
+            $this->nome = $nome; 
+        }
     }
 
     class jogador {
         private $nome;
         private $posicao;
+        
         public function getNome(){
             return $this->nome;
         }    
