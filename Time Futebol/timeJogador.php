@@ -10,10 +10,13 @@
         public function getJogadores() {
             return $this->jogadores;
         }
-
         public function addJogadores($oJogador) {
             $array_push($this->jogadores, $oJogador);
         }
+        public function getNome() {
+            return $this->nome;
+        }
+        
     }
 
     class jogador {
