@@ -14,8 +14,7 @@
 
     $comp = new computador();
     $comp->liga();
-    echo "Liga: " . $comp->getestadoAtual() . "<br>";
+    echo "Estado Atual: " . $comp->getestadoAtual() . "<br>";
     $comp->desliga();
-    echo "Desliga: " . $comp->getestadoAtual() . "<br>";
-
+    echo "Estado Atual: " . $comp->getestadoAtual() 
 ?>
