@@ -16,7 +16,7 @@
         $calc = new calculadora();
         echo $calc->soma(1,2) . "<br>";
         echo $calc->subtrai(5,1) ."<br>";
-        echo $calc->divide(10,2) ."<br>";;
+        echo $calc->divide(10,2) ."<br>";
         echo $calc->multiplica(5,3) . "<br>";
 
 
