@@ -1,20 +1,27 @@
 <?php 
+    class calculadora {
+        public function soma($numero1, $numero2){
+            return $numero1 + $numero2;
+        }
+        public function subtrai($numero1, $numero2){
+            return $numero1 - $numero2;
+        }
+        public function divide($numero1, $numero2){
+            return $numero1 / $numero2;
+        }
+        public function multiplica($numero1, $numero2){
+            return $numero1 * $numero2;
+        }
+    }
+        $calc = new calculadora();
+        echo $calc->soma(1,2);
 
-class calculadora {
-    public function soma($numero1, $numero2){
-        return $numero1 + $numero2;
-    }
-    public function subtracao($numero1, $numero2){
-        return $numero1 - $numero2;
-    }
-    public function divisao($numero1, $numero2){
-        return $numero1 / $numero2;
-    }
-    public function multiplicacao($numero1, $numero2){
-        return $numero1 * $numero2;
-    }
-}
-    $calc = new calculadora();
-    echo $calc->calculadora(1,2);
+        $calc = new calculadora();
+        echo $calc->subtrai(5,1);
 
+        $calc = new calculadora();
+        echo $calc->divide(10,2);
+
+        $calc = new calculadora();
+        echo $calc->multiplica(5,3);
 ?>
