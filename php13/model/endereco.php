@@ -2,21 +2,21 @@
     namespace app\model;
 
     class endereco{
-        private $logradouro;
-        private $bairro;
-        private $cidade;
+        private $Logradouro;
+        private $Bairro;
+        private $Cidade;
         private $Estado;
         private $cep;
 
 
     public function setlogradouro($logradouro) {
-        $this->logradouro = $logradouro;
+        $this->Logradouro = $logradouro;
     }
     public function setBairro($bairro) {
-        $this->bairro = $bairro;
+        $this->Bairro = $bairro;
     }
     public function setCidade($cidade) {
-        $this->cidade = $cidade;
+        $this->Cidade = $cidade;
     }
     public function setestado($estado) {
         $this->Estado = $estado;
@@ -25,14 +25,14 @@
         $this->cep = $cep;
     }
     public function getlogradouro() {
-        return $this->logradouro;
+        return $this->Logradouro;
     }
     public function getBairro() {
-        return $this->bairro;
+        return $this->Bairro;
     }
 
     public function getCidade() {
-        return $this->cidade;
+        return $this->Cidade;
     }
     public function getestado() {
         return $this->Estado;
