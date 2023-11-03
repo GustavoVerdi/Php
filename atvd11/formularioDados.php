@@ -10,4 +10,13 @@
     } else {
         echo "Sessão não iniciada";
     }
+
+
 ?>
+
+<script>
+function atualizarPagina() {
+    location.reload();
+}
+setInterval(atualizarPagina, 1000);
+</script>
