@@ -11,3 +11,5 @@ $log->pushhandler(new StreamHandler('your.log', level::Warning));
 
 $log->Warning('Foo');
 $log->error('Bar');
+
+?>
