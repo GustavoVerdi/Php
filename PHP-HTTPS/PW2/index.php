@@ -2,14 +2,12 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Monolog\Handler\StreamHandler;
-use monolog\Level;
+use Monolog\Level;
 use Monolog\Logger;
+use Monolog\HandLer\StreamHandLer;
 
-$Log = new Logger('name');
-$log->pushhandler(new StreamHandler('your.log', level::Warning));
+$log = new Logger('name');
+$log->pushHandler(new StreamHandler('your.log', Level::Warning));
 
-$log->Warning('Foo');
+$log->warning('Foo');
 $log->error('Bar');
-
-?>
